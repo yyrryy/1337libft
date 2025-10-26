@@ -6,7 +6,7 @@
 /*   By: aaliali <aaliali@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/19 20:18:15 by aaliali           #+#    #+#             */
-/*   Updated: 2025/10/20 08:37:33 by aaliali          ###   ########.fr       */
+/*   Updated: 2025/10/24 18:10:50 by aaliali          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,7 @@ char	*ft_strdup(const char *str)
 	newstr = malloc(len * 4);
 	if (!newstr)
 		return (NULL);
+	i = 0;
 	while (str[i])
 	{
 		newstr[i] = str[i];

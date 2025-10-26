@@ -6,7 +6,7 @@
 /*   By: aaliali <aaliali@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/16 09:26:09 by aaliali           #+#    #+#             */
-/*   Updated: 2025/10/22 21:25:26 by aaliali          ###   ########.fr       */
+/*   Updated: 2025/10/26 08:07:08 by aaliali          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,13 +14,17 @@
 
 void	*ft_calloc(size_t elements, size_t size)
 {
-	size_t	*ptr;
+	void	*ptr;
 	size_t	len;
 
 	if (elements == 0 || size == 0)
 		return (malloc(0));
+	if (elements > SIZE_MAX / size)
+		return (NULL);
 	len = elements * size;
 	ptr = malloc(len);
-	ft_memset(ptr, 0, len);
+	if(!ptr)
+		return (NULL);
+	ft_memset(ptr, 0, len); 
 	return (ptr);
 }

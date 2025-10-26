@@ -4,6 +4,9 @@
         "climits": "c",
         "unistd.h": "c",
         "chrono": "c",
-        "functional": "c"
+        "functional": "c",
+        "stdio.h": "c",
+        "fcntl.h": "c",
+        "strings.h": "c"
     }
 }

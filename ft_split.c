@@ -6,7 +6,7 @@
 /*   By: aaliali <aaliali@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/18 09:33:16 by aaliali           #+#    #+#             */
-/*   Updated: 2025/10/22 18:33:45 by aaliali          ###   ########.fr       */
+/*   Updated: 2025/10/25 18:19:42 by aaliali          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,12 +21,12 @@ static int	countwords(char const *s, char c)
 	i = 0;
 	while (s[i])
 	{
-		while (s[i] && (s == c))
+		while (s[i] && (s[i] == c))
 			i++;
-		if (s[i] && !(s == c))
+		if (s[i] && !(s[i] == c))
 		{
 			words++;
-			while (s[i] && !(s == c))
+			while (s[i] && !(s[i] == c))
 				i++;
 		}
 		i++;
@@ -39,7 +39,7 @@ static size_t	lencurrentword(const char *s, char c)
 	size_t	len;
 
 	len = 0;
-	while (s[len] && !(s == c))
+	while (s[len] && !(s[len] == c))
 		len++;
 	return (len);
 }
@@ -55,10 +55,25 @@ static char	**freeall(char **result, int i)
 	return (NULL);
 }
 
-static char	**buildwords(int i, int pos, const char *s, char c)
+static void	fill_word(char **result, const char *s, size_t word_idx, size_t pos, size_t len)
+{
+	size_t	j;
+
+	result[word_idx] = malloc(len + 1);
+	if (!result[word_idx])
+		return ;
+	j = 0;
+	while (j < len)
+	{
+		result[word_idx][j] = s[pos + j];
+		j++;
+	}
+	result[word_idx][j] = '\0';
+}
+
+static char	**buildwords(size_t i, int pos, const char *s, char c)
 {
 	size_t	len;
-	size_t	j;
 	char	**result;
 	size_t	words;
 
@@ -68,22 +83,16 @@ static char	**buildwords(int i, int pos, const char *s, char c)
 		return (NULL);
 	while (i < words)
 	{
-		while (s[pos] && (s == c))
+		while (s[pos] && s[pos] == c)
 			pos++;
 		len = lencurrentword(&s[pos], c);
-		result[i] = malloc(len + 1);
+		fill_word(result, s, i, pos, len);
 		if (!result[i])
 			return (freeall(result, i));
-		while (j < len)
-		{
-			result[i][j] = s[pos + j];
-			j++;
-		}
-		result[i][j] = '\0';
 		pos += len;
 		i++;
 	}
-	result[i] = (NULL);
+	result[i] = NULL;
 	return (result);
 }
 

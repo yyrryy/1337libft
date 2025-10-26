@@ -6,11 +6,11 @@
 /*   By: aaliali <aaliali@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/15 10:24:30 by aaliali           #+#    #+#             */
-/*   Updated: 2025/10/19 17:48:52 by aaliali          ###   ########.fr       */
+/*   Updated: 2025/10/23 08:55:15 by aaliali          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isalpha(int c)
+int	ft_isprint(int c)
 {
 	return (c >= 32 && c <= 126);
 }

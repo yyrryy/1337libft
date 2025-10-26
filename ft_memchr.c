@@ -6,7 +6,7 @@
 /*   By: aaliali <aaliali@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/17 10:30:47 by aaliali           #+#    #+#             */
-/*   Updated: 2025/10/20 21:55:53 by aaliali          ###   ########.fr       */
+/*   Updated: 2025/10/25 21:56:13 by aaliali          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,8 +21,8 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	i = 0;
 	while (i < n)
 	{
-		if (ptr[i] == c)
-			return (ptr + i);
+		if (ptr[i] == (unsigned char) c)
+			return ((void *)(ptr + i));
 		i++;
 	}
 	return (NULL);

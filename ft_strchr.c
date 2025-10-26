@@ -6,7 +6,7 @@
 /*   By: aaliali <aaliali@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/17 08:43:16 by aaliali           #+#    #+#             */
-/*   Updated: 2025/10/22 15:40:54 by aaliali          ###   ########.fr       */
+/*   Updated: 2025/10/25 21:57:27 by aaliali          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ char	*ft_strchr(const char *s, int c)
 	i = 0;
 	while (s[i])
 	{
-		if (s[i] == c)
+		if (s[i] == (unsigned char) c)
 			return ((char *)s + i);
 		i++;
 	}

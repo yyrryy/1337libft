@@ -6,7 +6,7 @@
 /*   By: aaliali <aaliali@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/16 09:26:09 by aaliali           #+#    #+#             */
-/*   Updated: 2025/10/20 22:45:25 by aaliali          ###   ########.fr       */
+/*   Updated: 2025/10/24 12:31:21 by aaliali          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,14 +21,14 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 	d = (unsigned char *)dest;
 	if (d == s || n == 0)
 		return (dest);
-	if (s > d || d >= s + n)
+	if (d < s)
 		ft_memcpy(d, s, n);
 	else
 	{
-		while (n)
+		while (n > 0)
 		{
-			d[n] = s[n];
 			n-- ;
+			d[n] = s[n];
 		}
 	}
 	return (dest);

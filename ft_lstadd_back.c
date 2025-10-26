@@ -6,7 +6,7 @@
 /*   By: aaliali <aaliali@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/19 10:03:03 by aaliali           #+#    #+#             */
-/*   Updated: 2025/10/20 08:17:47 by aaliali          ###   ########.fr       */
+/*   Updated: 2025/10/26 08:20:06 by aaliali          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ void	ft_lstadd_back(t_list **lst, t_list *new)
 	first = *lst;
 	if (!first)
 	{
-		first = new;
+		*lst = new;
 		return ;
 	}
 	while (first->next)

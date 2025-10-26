@@ -6,7 +6,7 @@
 /*   By: aaliali <aaliali@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/22 22:09:25 by aaliali           #+#    #+#             */
-/*   Updated: 2025/10/22 22:20:43 by aaliali          ###   ########.fr       */
+/*   Updated: 2025/10/23 22:39:54 by aaliali          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ int ft_memcmp(const void *s1, const void *s2, size_t n)
 	if (n == 0)
 		return (0);
 	i = 0;
-	while (i < n && ptr1[i] == ptr2[i] && ptr1[i] && ptr2[i])
+	while (i < n && ptr1[i] == ptr2[i])
 		i++;
 	if (i == n)
 		return (0);
