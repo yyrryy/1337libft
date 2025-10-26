@@ -6,7 +6,7 @@
 /*   By: aaliali <aaliali@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/17 13:05:53 by aaliali           #+#    #+#             */
-/*   Updated: 2025/10/25 17:13:50 by aaliali          ###   ########.fr       */
+/*   Updated: 2025/10/26 11:29:43 by aaliali          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,6 @@ char	*ft_substr(char const *s, size_t start, size_t len)
 		dup[i] = s[start + i];
 		i++;
 	}
-	dup[start] = '\0';
+	dup[i] = '\0';
 	return (dup);
 }

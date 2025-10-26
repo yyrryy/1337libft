@@ -6,13 +6,13 @@
 /*   By: aaliali <aaliali@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/15 10:24:30 by aaliali           #+#    #+#             */
-/*   Updated: 2025/10/25 17:19:13 by aaliali          ###   ########.fr       */
+/*   Updated: 2025/10/26 17:11:37 by aaliali          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include"libft.h"
 
-static int checkedge(int i, const char *str, int s)
+static int	checkedge(int i, const char *str, int s)
 {
 	long long	r;
 	long long	temp;
@@ -48,5 +48,5 @@ int	ft_atoi(const char *str)
 			s *= -1;
 		i++;
 	}
-	return checkedge(i, str, s);
+	return (checkedge(i, str, s));
 }

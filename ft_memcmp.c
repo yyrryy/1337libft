@@ -6,19 +6,18 @@
 /*   By: aaliali <aaliali@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/22 22:09:25 by aaliali           #+#    #+#             */
-/*   Updated: 2025/10/23 22:39:54 by aaliali          ###   ########.fr       */
+/*   Updated: 2025/10/26 17:16:40 by aaliali          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include"libft.h"
 
-int ft_memcmp(const void *s1, const void *s2, size_t n)
+int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
-    const unsigned char *ptr1;
-	const unsigned char *ptr2;
-	size_t              i;
+	const unsigned char	*ptr1;
+	const unsigned char	*ptr2;
+	size_t				i;
 
-	i = 0;
 	ptr1 = (const unsigned char *)s1;
 	ptr2 = (const unsigned char *)s2;
 	if (n == 0)
