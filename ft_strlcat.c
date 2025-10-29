@@ -6,7 +6,7 @@
 /*   By: aaliali <aaliali@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/17 07:55:44 by aaliali           #+#    #+#             */
-/*   Updated: 2025/10/26 09:09:55 by aaliali          ###   ########.fr       */
+/*   Updated: 2025/10/28 09:59:07 by aaliali          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,9 +22,7 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 	i = 0;
 	s_len = ft_strlen(src);
 	if (!dst)
-	{
 		return (s_len + d_len);
-	}
 	while (dst[d_len] && d_len < size)
 		d_len++;
 	if (d_len == size)

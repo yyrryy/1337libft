@@ -6,7 +6,7 @@
 /*   By: aaliali <aaliali@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/17 15:38:49 by aaliali           #+#    #+#             */
-/*   Updated: 2025/10/26 17:30:55 by aaliali          ###   ########.fr       */
+/*   Updated: 2025/10/28 09:59:04 by aaliali          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ static int	inset(char c, const char *set)
 	return (0);
 }
 
-char	*handleempty(void)
+static char	*handleempty(void)
 {
 	char	*ptr;
 

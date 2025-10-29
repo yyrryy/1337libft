@@ -6,13 +6,13 @@
 /*   By: aaliali <aaliali@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/17 15:13:34 by aaliali           #+#    #+#             */
-/*   Updated: 2025/10/21 09:04:44 by aaliali          ###   ########.fr       */
+/*   Updated: 2025/10/28 21:54:00 by aaliali          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include"libft.h"
 
-char	*joining(size_t s1len, size_t s2len, const char *s1, const char *s2)
+static char	*joining(size_t s1len, size_t s2len, const char *s1, const char *s2)
 {
 	char	*ptr;
 	size_t	i;

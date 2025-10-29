@@ -6,7 +6,7 @@
 /*   By: aaliali <aaliali@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/19 20:16:45 by aaliali           #+#    #+#             */
-/*   Updated: 2025/10/26 07:42:29 by aaliali          ###   ########.fr       */
+/*   Updated: 2025/10/29 10:41:25 by aaliali          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,8 @@
 # include <stdlib.h>
 # include <stddef.h>
 # include <unistd.h>
-# include <limits.h>
 # include <stdint.h>
+
 typedef struct s_list
 {
 	void			*content;
