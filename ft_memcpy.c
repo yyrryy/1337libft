@@ -6,7 +6,7 @@
 /*   By: aaliali <aaliali@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/16 09:26:09 by aaliali           #+#    #+#             */
-/*   Updated: 2025/11/02 16:36:35 by aaliali          ###   ########.fr       */
+/*   Updated: 2025/11/02 16:46:44 by aaliali          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 	size_t				i;
 	const unsigned char	*ptr1;
 	unsigned char		*ptr2;
-	
+
 	if (!dest && !src)
 		return (NULL);
 	i = 0;
