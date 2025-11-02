@@ -6,7 +6,7 @@
 #    By: aaliali <aaliali@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/10/30 21:09:51 by aaliali           #+#    #+#              #
-#    Updated: 2025/11/02 15:11:09 by aaliali          ###   ########.fr        #
+#    Updated: 2025/11/02 16:19:21 by aaliali          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -40,5 +40,3 @@ fclean: clean
 	rm -f $(NAME)
 
 re: fclean all
-
-.PHONY: re all bonus clean fclean
